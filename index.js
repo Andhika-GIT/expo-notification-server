@@ -2,7 +2,7 @@ import { Expo } from "expo-server-sdk";
 
 const expo = new Expo();
 
-const TOKEN = "test";
+const TOKEN = process.argv[2];
 
 const sendNotification = async (token) => {
   if (Expo.isExpoPushToken(token)) {
